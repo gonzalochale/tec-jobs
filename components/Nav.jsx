@@ -20,14 +20,7 @@ const Nav = () => {
 
   return (
     <nav className='flex-between w-full mb-16 pt-3 '>
-      <Link href='/' className='flex gap-2 flex-center'>
-        <Image
-          src='/assets/images/logo.svg'
-          alt='logo'
-          width={37}
-          height={37}
-          className='object-contain rounded-full'
-        />
+      <Link href='/' className='flex flex-center'>
         <p className='logo_text'>TecJobs</p>
       </Link>
 
@@ -35,7 +28,7 @@ const Nav = () => {
       <div className='sm:flex hidden'>
         {session?.user ? (
           <div className='flex gap-3 md:gap-5'>
-            <Link href='/create-prompt' className='black_btn'>
+            <Link href='/create-prompt' className='outline_btn'>
               Crear Publicación
             </Link>
 
@@ -63,7 +56,7 @@ const Nav = () => {
                   onClick={() => {
                     signIn(provider.id);
                   }}
-                  className='black_btn'
+                  className='outline_btn'
                 >
                   Iniciar Sesión
                 </button>
@@ -107,7 +100,7 @@ const Nav = () => {
                     setToggleDropdown(false);
                     signOut();
                   }}
-                  className='mt-5 w-full black_btn'
+                  className='mt-5 w-full outline_btn'
                 >
                   Cerrar Sesión
                 </button>
@@ -124,7 +117,7 @@ const Nav = () => {
                   onClick={() => {
                     signIn(provider.id);
                   }}
-                  className='black_btn'
+                  className='outline_btn'
                 >
                   Iniciar Sesión
                 </button>
